@@ -1,4 +1,5 @@
 import pygame, sys
+from Drawing import Drawing
 
 SCREEN_WIDTH = 288
 SCREEN_HEIGHT = 512
@@ -57,6 +58,7 @@ class Bird(pygame.sprite.Sprite):
 
 
 	def draw(self, screen):
+		Drawing.__init__(screen)
 		self.surface.fill((0, 0, 0, 0))
 
 		if self.jumped:
